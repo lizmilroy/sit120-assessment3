@@ -1,0 +1,87 @@
+<!--  SIT120 Assessment 3 -->
+<!-- Elizabeth Milroy - s222075016 -->
+<!-- faq.html --> 
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- Stylesheet Links -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="faq.css" />
+  
+    <!-- Used for @media rules in CSS. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Link to the text font used. -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+
+    <!-- Title of the webpage. -->
+    <title>Keyboard Building Service</title>
+  </head>
+
+  <body>
+    <!-- Using the 'navigation' application/component to create the navigation bar. -->
+    <div class="navigation-app">
+      <navigation></navigation>
+    </div>
+
+    <!-- Container for all main content. -->
+    <div class="main-content">
+      <!-- This container is used to implement flexbox. -->
+      <div class="introduction">
+        <h1>Frequently Asked Questions</h1>
+
+        <p>Mechanical keyboards can be a hard hobby to get into. It is often very intimidating and overwhelming. This is why I have included
+          this page, full of questions you may have, and the answers to them! </p>
+
+        <p>There is plenty of information to take in on this page, so don't be afraid to come back a few times to understand it all.</p>
+
+        <p>I have also included some more specific information about my services, and the parts you will need to decide on if you decide to 
+          order a custom keyboard from me. </p>
+      </div>
+
+      <!-- Div containing image used. -->
+      <div class="faq-image">
+        <img src="../resources/images/faq-image-edit.png" class="aqua-keyboard" alt="Keyboard">
+      </div>
+    </div>
+
+    <!-- Contains all secondary content. -->
+    <div class="secondary-content">
+      <!-- Secondary wrapper used to implement styles. -->
+      <div class="secondary-wrapper">
+        <h2>Questions & Answers</h2>
+        <p> Click the questions you'd like to explore!</p>
+
+        <!-- Uses the 'qna' application/'showcontent' component to display the qna content. -->
+        <div id ="qna">
+          <!-- Example of list rendering. -->
+          <showcontent v-for="qa in qas" :key="qa.id " :qa="qa"></showcontent>
+        </div>
+       
+        <!-- Uses the 'countButton' application/'counter' component to display the counter game. -->
+        <div id="count-buttons">
+          <p>Thanks for visiting my website! Here's a counter game that you can play.</p>
+          <!-- Example of class and style bindings and event handling..-->
+          <counter class="counter" :count="num" @increase="num++" @decrease="num--" :class="{ positive: num > 0, negative: num < 0 }"></count> 
+        </div>
+      </div>
+    </div>
+
+    <!-- Using the 'createFooter' application to create and display the footer.. -->
+    <div class="footer-app">
+      <footerbar></footerbar>
+    </div>
+  </body>
+
+<!-- Script that allows the use of Vue2 from CDN.  -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<!-- Scripts used to implement Vue and JS functions. -->
+<script src="faq.js"></script> 
+<script src="main.js"></script> 
+
+</html>
+

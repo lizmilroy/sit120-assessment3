@@ -1,0 +1,94 @@
+<!--  SIT120 Assessment 3 -->
+<!-- Elizabeth Milroy - s222075016 -->
+<!-- index.html --> 
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+
+      <!-- Stylesheet Links -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    
+    <!-- Used for @media rules in CSS. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Link to the text font used. -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+
+    <!-- Title of web page.  -->
+    <title>Keyboard Building Service</title>
+  </head>
+
+  <body>
+    <!-- Using the 'navigation' application to create the navigation bar. -->
+    <div class="navigation-app">
+      <navigation></navigation>
+    </div>
+
+    <!-- Div containing the image used as a header. -->
+    <div class="main-image">
+      <img src="../resources/images/main-img.png" class="keyboard" alt="Keyboard">
+    </div>
+
+    <!-- Container for all main content. -->
+    <div class="main-content">
+      <!-- This container is used to implement flexbox. -->
+      <div class="introduction">
+        <h1>Keyboard Building Service</h1>
+        <p>Welcome to my website! My name is Liz, and I create mechanical keyboards.
+          Building your own mechanical keyboard can be time-consuming and challenging,
+          so allow me to make it easy for you!</p>
+
+        <p>It's as simple as telling me what you want! I will then get the parts, build, and ship the keyboard to you.
+          If you're a beginner, don't worry! This website has lots of information about mechanical keyboards. You can find
+          informtion about everything needed to place an order.</p>
+
+        <p>If you know exactly what you want, head over to the Order page and get started on building your keyboard.
+          If you're not sure, have a look at the FAQ page. This will provide you with all the information you need.</p>
+      </div>
+    </div>
+
+    <!-- Contains all secondary content. -->
+    <div class="secondary-content">
+      <!--The first of three divs that represent columns used in the three column layout. -->
+      <div class="recent-news">
+        <h2>Recent News</h2>
+        <p>Keychron has recently released their new full-sized mechanical keyboard, the Keychron Q5 QMK.
+          It can be brought barebones or full assembled, similar to the other keyboards in the Q line, such as the Q1 and Q2.
+          I am taking orders using this case! Check the keyboard out here:
+          <a href="https://www.keychron.com/products/keychron-q5-qmk-custom-mechanical-keyboard">Keychron Q5</a></p>
+      </div>
+
+      <!-- The second div used in the three column layout. -->
+      <div class="updates">
+        <h2>Updates</h2>
+        <p>I have recently implemented an easier way to select between Lube, Films, Lube & Films, and None, in the order form.
+          This should hopefully streamline the process of ordering from me. Feel free to contact me and let me know what you think.
+          Just click the mail icon at the top of the page!</p>
+      </div>
+
+      <!-- The third, and last div used in the three column layout. -->
+      <div class="about-me">
+        <h2>About Me</h2>
+        <p>I live in Australia, and I'm 22. I am currently studying at Deakin University, undertaking the
+          Bachelor of Information Technolgy. This website was created as part of SIT120 Assessment 1. </p>
+      </div>
+    </div>
+
+    <!-- Using the 'createFooter' application to create and display the footer.. -->
+    <div class="footer-app">
+      <footerbar></footerbar>
+    </div>
+
+  </body>
+ 
+<!-- Script that allows the use of Vue2 from CDN.  -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<!-- Script used to implement Vue and JS functions. -->
+<script src="main.js"></script> 
+
+</html>
+

@@ -1,0 +1,53 @@
+/* SIT120 Assessment 3 */
+/* Elizabeth Milroy - s222075016 */
+/* index.css - Styles specfic to the index.html page */
+
+/* Style for Header Image */ 
+.main-image {
+	display:flex;
+}
+
+.keyboard {
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+/* Main Content Styles */
+.main-content {
+	display: flex;
+	justify-content: center;
+}
+
+.introduction {
+	display: flex;
+	flex-direction: column;
+	padding: 60px;
+	width: 80%;
+	height: 80%;
+}
+
+/* Secondary Content Styles */
+.secondary-content {
+	display: flex;
+	flex-direction: row;
+	gap: 10%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.recent-news, .updates, .about-me {
+	flex:100%;
+}
+
+/* Changes from a three column layout to a single column layout */
+@media (max-width: 1400px) {
+	.secondary-content {
+		flex-direction: column;
+	}
+	.main-navgation {
+		font-size: 1.8em;
+	}	
+}

@@ -1,0 +1,208 @@
+/* SIT120 Assessment 3 */
+/* Elizabeth Milroy - s222075016 */
+/* order.css - Styles specfic to the order.html page */
+
+/* Main Content Styles */
+.main-content {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 2%;
+}
+
+.introduction {
+	display: flex;
+	flex-direction: column;
+	padding: 60px;
+	width: 80%;
+	height: 80%;
+}
+
+/* Secondary Content Styles */
+.secondary-content {
+    display: flex;
+	justify-content: center;
+}
+
+.secondary-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding-top: 2%;
+	width: 80%;
+	height: 80%;
+}
+
+/* Form Styles */
+input, select {
+	border: 1px solid black;
+}
+
+.section1 h3, .section2 h3, .section3 h3 {
+	width: 100%;
+	border-bottom: 3px solid black;
+}
+
+.section1-content, .section2-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.section3-content, .row1, .row2, .row3, .radio-wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+.input-wrapper input, select {
+	width: 100%;
+}
+
+.input-wrapper, .input-wrapper-radio, .radio, .col1, .col2 {
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 5%;
+}
+
+.input-wrapper, .input-wrapper, .input-wrapper, .radio, .radio-row1, .radio-row2, .col1, .col2 {
+	flex: 50%;
+}
+
+/* Section 2 Specific Styles*/
+.radio {
+	display: flex;
+	flex-direction: column;
+}
+
+.radio-wrapper {
+	padding-left: 2%;
+}
+
+/* Section 3 Specific Styles */
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 5%;
+	padding-top: 5%;;
+}
+
+.buttons input {
+	border: 2px solid black;
+	font-size: 1.3em;
+	padding: 1%;
+}
+
+/* Input/Button/Text Area Styles*/
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+	background-color: lightgrey;
+}
+
+input, textarea {
+	outline: none;
+	font-family: 'Oswald';
+}
+
+textarea {
+	resize: none;
+	border: 2px solid black;
+	width: 100%;
+}
+
+.introduction a:hover {
+	color: #578491;
+}
+
+/* Media Styles */
+@media (min-width: 1401px) {
+	input, select, option, textarea {
+		font-size: 1.4em;
+		padding: 1%;
+	}
+
+	.form label, .title, p  {
+		font-size: 1.7em;
+	}
+
+	.radio-input-wrapper label {
+		font-size: 1.6em;
+	}
+}
+
+@media (max-width: 1400px) {
+	input, select, option, textarea {
+		font-size: 1.3em;
+		padding: 0.8%;
+	}
+
+	.form label, .title, p {
+		font-size: 1.6em;
+	}
+}
+
+@media (max-width: 1000px) {
+	input, select, option, textarea {
+		font-size: 1.2em;
+		padding: 2%;
+	}
+
+	.form label, .check-form p {
+		font-size: 1.3em;
+	}
+
+	.input-wrapper, .input-wrapper-radio, .radio, .col1, .col2 {
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+
+@media (max-width: 780px) {
+	.row1, .row2, .row3, .section3-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.radio-row1, .radio-row2 {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 20%;
+		padding-left: 0px;
+		padding-top: 2%;
+	}
+
+	input, select, option, textarea {
+		font-size: 1.4em;
+		padding: 1.5%;
+	}
+
+	.form label, .check-form p {
+		font-size: 1.5em;
+	}
+
+	.radio-input-wrapper label {
+		font-size: 1.4em;
+	}
+} 
+
+/* Extra Media rule to prevent text wrapping. */
+@media (max-width: 610px) {
+	.radio-row1, .radio-row2 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.radio-input-wrapper label {
+		font-size: 1.4em;
+	}
+
+	.buttons input {
+		padding: 1.5%;
+	}
+
+	input, select, option, textarea, .check-form p {
+		font-size: 1.3em;
+	}
+
+	.form label {
+		font-size: 1.4em;
+	}
+}

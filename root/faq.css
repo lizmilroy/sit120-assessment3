@@ -1,0 +1,111 @@
+/* SIT120 Assessment 3 */
+/* Elizabeth Milroy - s222075016 */
+/* faq.css - Styles specfic to the faq.html page */
+
+/* Main Content Styles */
+.main-content {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    gap: 5%;
+}
+
+.introduction {
+    flex: 60%;
+}
+
+/* Secondary Content Styles */
+.secondary-content {
+    display:flex;
+    justify-content: center;
+}
+
+.secondary-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+}
+
+.aqua-keyboard {
+    background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	max-width: 100%;
+    max-height: 100%;
+}
+
+/* General Button Styles */
+button {
+	color: white;
+	font-family: 'Oswald';
+    background-color: transparent;
+    border: solid white 1px;
+    padding: 0.3%;
+}
+
+#qna button:hover, .counter button:hover {
+	background-color: #233B41;
+}
+
+/* Drop Down Button/Content Styles */
+#qna button {
+    justify-content: flex-start;
+	width: 100%;
+}
+
+#qna p {
+    border: solid white 1px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1%;
+}
+
+#qna p.closed {
+    border: solid white 0px;
+    padding: 0%;
+}
+
+/* Counter Game Styles */
+#count-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+#count-buttons p, .counter p {
+    text-align: center;
+}
+
+/* Example of class and style bindings. */
+.counter.positive p {
+    color: green;
+}
+
+.counter.negative p {
+    color: red;
+}
+
+/* Media Styles */
+@media (max-width: 1400px) {
+    .aqua-keyboard {
+        display: none;
+    }
+
+    .main-content {
+        gap: 0%;
+    }
+}

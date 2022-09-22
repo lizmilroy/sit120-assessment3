@@ -1,0 +1,219 @@
+<!--  SIT120 Assessment 3 -->
+<!-- Elizabeth Milroy - s222075016 -->
+<!-- order.html --> 
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- Stylesheet Links -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="order.css" />
+  
+    <!-- Used for @media rules in CSS. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Link to the text font used. -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+
+    <!-- Title of the web page. -->
+    <title>Keyboard Building Service</title>
+  </head>
+
+  <body>
+    <!-- Using the 'navigation' application/ to create the navigation bar. -->
+    <div class="navigation-app">
+      <navigation></navigation>
+    </div>
+
+    <!-- Container for all main content. -->
+    <div class="main-content">
+      <!-- This container is used to implement flexbox. -->
+      <div class="introduction">
+        <h1>Ordering</h1>
+        <p>Below you can order a mechanical keyboard from me! The form asks for your personal information, as well as information on the keyboard you would like to be built.</p>
+        <p>If you are unsure of your options, please navigate to the <a href="faq.html">FAQ</a> page, which has information about all of the keyboard related fields you need to fill out.</p>
+      </div>
+    </div>
+
+    <!-- Container for secondary content. -->
+    <div class="secondary-content">
+      <!-- Wrapper used to implement flexbox. -->
+      <div class="secondary-wrapper">
+        <div class="secondary-intro">
+          <h1>Order Form</h1>
+        </div>
+        
+        <!-- Container to implement flexbox. -->
+        <div class="order-form">
+          <!-- HTML form. Rows and columns are used to implment a two column layout using flexbox. -->
+          <!-- 'onsubmit' is used to create an alert box using a JavaScript function. -->
+          <form onsubmit="submitAlert()" class="form">
+            <div class="section1">
+              <h3>Personal Information</h3>
+              <div class="section1-content">
+                <div class="row1">
+                  <!-- Containers are used for each label/input pair for easy styling in CSS. -->
+                  <!-- All input elements in section 1 use v-model (form input bindings) to create a validation form.-->
+                  <div class="input-wrapper">
+                    <label for="fname">First Name:</label><br>
+                    <!-- v-focus is a custom directive which determines which form input field will be foucsed upon when naivgating to the page. -->
+                    <input v-focus type="text" id="fname" name="fname" v-model="fname">
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label for="lname2">Last Name:</label><br>
+                    <input type="text" id="lname" name="lname" v-model="lname"><br>
+                  </div>
+                </div>
+
+                <div class="row2">
+                  <div class="input-wrapper">
+                    <label for="addr">Address:</label><br>
+                    <input type="text" id="addr" name="addr" v-model="addr"><br>
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label for="state">State:</label><br>
+                    <select name="state" id="state" from="state" v-model="state">
+                      <option value="VIC">VIC</option>
+                      <option value="NSW">NSW</option>
+                      <option value="SA">SA</option>
+                      <option value="QLD">QLD</option>
+                      <option value="NT">NT</option>
+                      <option value="TAS">TAS</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row3">
+                  <div class="input-wrapper">
+                    <label for="postcode">Post Code:</label><br>
+                    <input type="text" id="postcode" name="postcode" maxlength="4" v-model="postcode">
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" v-model="email">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section2">
+              <h3>Keyboard Information</h3>
+
+              <div class="section2-content">
+                <div class="row1">
+                  <div class="input-wrapper">
+                    <label for="case">Case:</label><br>
+                    <input type="text" id="case" name="case">
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label for="layout">Layout:</label><br>
+                    <input type="text" id="layout" name="layout">
+                  </div>
+                </div>
+
+                <div class="row2">
+                  <div class="input-wrapper">
+                    <label for="switches">Switches:</label><br>
+                    <input type="text" id="switches" name="switches">
+                  </div>
+  
+                  <div class="input-wrapper">
+                    <label for="stabilizers">Stabilizers:</label>
+                    <input type="text" id="stabilizers" name="stabilizers">
+                  </div>
+                </div>
+
+                <div class="row3">
+                  <div class="input-wrapper">
+                    <label for="keycaps">Keycaps:</label><br>
+                    <input type="text" id="keycaps" name="keycaps">
+                  </div>
+
+                  <div class="radio">
+                    <div class="title">Lube Preferences:</div>
+                      <div class="radio-wrapper">
+
+                        <div class="radio-row1">
+                          <div class="radio-input-wrapper">
+                            <label for="lube">Lube</label>
+                            <input type="radio" id="lube" name="preferences" value="lube">
+                          </div>
+
+                          <div class="radio-input-wrapper">
+                            <label for="films">Films</label>
+                            <input type="radio" id="films" name="preferences" value="films">
+                          </div>
+                        </div>
+  
+                        <div class="radio-row2">
+                          <div class="radio-input-wrapper">
+                            <label for="lube-films">Lube & Films</label>
+                            <input type="radio" id="lube-films" name="preferences" value="lube-films">
+                          </div>
+
+                          <div class="radio-input-wrapper">
+                            <label for="none">None</label>
+                            <input type="radio" id="none" name="preferences" value="none">
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="section3">
+              <h3>Submit Order</h3>
+              <p>Please confirm your personal details before you submit your order.</p>
+            
+              <div class="section3-content">
+                <div class="col1">
+                  <!-- Handling User Input using v-model.'fname' and 'lname' use a filter to capitalize the first letter of each word.  -->
+                  <p>Name: {{ fname | capitalize}} {{ lname | capitalize }}</p>
+                  <p>Address: {{ addr }} {{ state }} {{ postcode }} </p>
+                  <p>Email: {{ email }}</p>
+                </div>
+
+                <div class="col2">
+                  <div class="textarea-input-wrapper">
+                    <label for="additional">Additional Notes:</label><br>
+                    <textarea id="additional" name="additional" rows="5"></textarea>
+                  </div>
+
+                  <!-- Buttons used to submit or reset the form. -->
+                  <!-- Clicking the submit button sends a event that is handled by the 'submitAlert' function. -->
+                  <div class="buttons">
+                    <input type="submit" value="Submit" onclick="alertBox()">
+                    <input type="reset" value="Reset">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Using the 'createFooter' application to create and display the footer.. -->
+    <div class="footer-app">
+      <footerbar></footerbar>
+    </div>
+
+  </body>
+
+<!-- Script that allows the use of Vue2 from CDN.  -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<!-- Script used to implement Vue and JS functions. -->
+<script src="order.js"></script>
+<script src="main.js"></script> 
+    
+</html>
